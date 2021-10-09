@@ -23,8 +23,15 @@ object Test04_String {
     //三引号模板字符串，保持多行字符串的原格式输出
     println(
       s"""
-         |
+         |select * from
+         |where
+         |  name = ${name}
+         |and
+         |  age > ${age}
          |""".stripMargin)
-  }
 
+    val a = f"${num}%2.2f"
+    println(a)
+    
+  }
 }
