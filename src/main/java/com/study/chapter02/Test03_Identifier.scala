@@ -9,6 +9,8 @@ object Test03_Identifier {
     val +-*/ = "hello";
     println(+-*/);
 
-
+    //用反引号``包括的任何字符
+    val `val` = "hello"
+    println(`val`)
   }
 }
