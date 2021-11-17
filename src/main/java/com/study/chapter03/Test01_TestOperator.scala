@@ -32,6 +32,44 @@ object Test01_TestOperator {
     def isNotEmpty(str: String): Boolean = {
       return (str != null) && (!("" == str.trim))
     }
+
+    //4.赋值运算符
+    var b: Byte = 10
+    //    b += 1  //报错
+
+    println(b)
+
+    //5.位运算符
+    //<< >>补符号位 >>>补0
+    //0000 0000 0011 1100
+    val a = 60
+    //byte会自动转换成int
+    println(a << 3) //0000 0001 1110 0000
+    println(a >> 3) //0000 0000 0000 0111
+
+    //13:0000 0000 0000 1101
+    //取反+1：1111 1111 1111 0011
+    val s: Short = -13
+
+    //符号位不变，左移两位
+    //1111 1111 1100 1100
+    //1000 0000 0011 0100 =52取负数
+    //32+16+4=-52
+    println(s << 2) //-13 * 2^2
+    println(2 >> 2)
+
+    //1111 1111 1111 0011
+    //0011 1111 1111 1100
+    println(s >>> 2) //补0
+
+    //6.运算符的本质
+    val n1: Int = 12
+    val n2: Int = 37
+    println(n1 + n2)
+    println(n1.+(n2))
+
+    println(n1.toString)
+    println(n1 toString)
   }
 
 }
