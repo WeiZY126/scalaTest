@@ -34,9 +34,10 @@ object Student12 {
   private var student: Student12 = _
 
   def getInstance(): Student12 = {
-    if (student == null)
+    if (student == null) {
       student = new Student12("alice", 18)
-    else
+      student
+    } else
       student
   }
 }
